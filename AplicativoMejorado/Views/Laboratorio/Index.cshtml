@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="mb-4 text-center">Laboratorio</h1>
+
+<fieldset class="border p-4 rounded shadow-sm">
+    <legend class="w-auto px-3">Búsqueda de Laboratorio</legend>
+
+    <form id="frmBusqueda" method="post" class="row g-3">
+        <div class="col-md-6">
+            <label for="inputNombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" name="nombre" id="inputNombre" placeholder="Ingrese el nombre">
+        </div>
+
+        <div class="col-md-6">
+            <label for="inputDireccion" class="form-label">Dirección</label>
+            <input type="text" class="form-control" name="Direccion" id="inputDireccion" placeholder="Ingrese la dirección">
+        </div>
+
+        <div class="col-12">
+            <label for="inputPersona" class="form-label">Persona Contacto</label>
+            <input type="text" class="form-control" id="inputPersona" name="personaContacto" placeholder="Ingrese la persona de contacto">
+        </div>
+
+        <div class="col-12 text-end mt-3">
+            <button type="button" class="btn btn-primary me-2" onclick="BuscarLaboratorio()">
+                <i class="bi bi-search"></i> Buscar
+            </button>
+            <button type="button" class="btn btn-secondary" onclick="LimpiarLaboratorio()">
+                <i class="bi bi-eraser"></i> Limpiar
+            </button>
+        </div>
+    </form>
+</fieldset>
+
+<div id="divTable" class="mt-4">
+</div>
+
+
+<script src="~/js/generic.js"></script>
+<script src="~/js/laboratorio.js"></script>

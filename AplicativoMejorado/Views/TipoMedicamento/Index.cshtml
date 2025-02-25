@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="mb-4 text-center">Tipo Medicamento</h1>
+
+<fieldset class="border p-4 rounded shadow-sm">
+    <legend class="w-auto px-3">Agregar Tipo Medicamento</legend>
+
+    <form id="frmGuardarTipoMedicamento" method="post" class="row g-3">
+        <div class="col-md-6">
+            <label for="inputNombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" name="idTipoMedicamento" id="idTipoMedicamento" placeholder="Id del Medicamento">
+        </div>
+
+        <div class="col-md-6">
+            <label for="inputNombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingrese el nombre">
+        </div>
+
+        <div class="col-md-6">
+            <label for="inputDireccion" class="form-label">Descripción</label>
+            <input type="text" class="form-control" name="descripcion" id="descripcion" placeholder="Ingrese la descripción">
+        </div>
+
+        <div class="col-12 text-end mt-3">
+            <button type="button" class="btn btn-primary me-2" onclick="GuardarTipoMedicamento()">
+                <i class="bi bi-search"></i> Guardar
+            </button>
+            <button type="button" class="btn btn-primary me-2" onclick="GuardarCambiosTipoMedicamento()">
+                <i class="bi bi-search"></i> Modificar
+            </button>
+            <button type="button" class="btn btn-secondary" onclick="LimpiarTipoMedicamento()">
+                <i class="bi bi-eraser"></i> Limpiar
+            </button>
+        </div>
+    </form>
+</fieldset>
+
+<div id="divTable" class="mt-4">
+</div>
+
+
+<script src="~/js/generic.js"></script>
+<script src="~/js/tipomedicamento.js"></script>
